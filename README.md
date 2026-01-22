@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather Agent Chat Interface
 
-## Getting Started
+A responsive chat interface built using **Next.js** that allows users to interact with a weather agent via a **streaming API**.  
+The application supports real-time responses, clean UI/UX, and mobile-first design, as required in the assignment.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 Deployment URL: **(Add after deployment)**  
+🔗 GitHub Repository: **(Add your repo link)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Assignment Objective
 
-## Learn More
+The goal of this assignment was to build a frontend chat interface that:
+- Connects to a weather agent API
+- Handles **streaming responses**
+- Displays user and agent messages distinctly
+- Provides a clean, responsive, and intuitive UI
 
-To learn more about Next.js, take a look at the following resources:
+This project strictly follows the UI and functional requirements mentioned in the assignment instructions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** React Hooks
+- **API Communication:** Fetch API with streaming support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Features Implemented
+
+### Core Features
+- Chat-style interface with message history
+- User messages aligned to the right
+- Agent responses aligned to the left
+- Real-time **streaming response display**
+- Auto-scroll to the latest message
+- Keyboard support (Enter to send)
+- Disabled input during API calls
+- Graceful error handling
+
+### UI / UX
+- Mobile-first responsive design (min width 320px)
+- Clean and minimal interface
+- Typing indicator while agent is responding
+- Subtle animations for message appearance
+- Accessible input and buttons
+
+---
+
+## 🌐 API Integration
+
+The application integrates with the following streaming API:
+
