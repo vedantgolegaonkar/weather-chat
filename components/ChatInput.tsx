@@ -23,24 +23,26 @@ export default function ChatInput({ onSend, disabled }: Props) {
   };
 
   return (
-    <div className="flex items-center gap-3">
-      <input
-        type="text"
-        placeholder="Ask about the weather..."
-        className="flex-1 rounded-full border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black disabled:bg-gray-100 disabled:text-gray-400"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        onKeyDown={handleKeyDown}
-        disabled={disabled}
-      />
+    <div className="fixed inset-x-0 bottom-6 flex justify-center">
+      <div className="flex w-full max-w-[760px] items-center gap-3 rounded-2xl bg-white px-4 py-10 shadow-xl">
+        <input
+          type="text"
+          placeholder="Ask anything…"
+          className="flex-1 bg-transparent text-sm outline-none"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={handleKeyDown}
+          disabled={disabled}
+        />
 
-      <button
-        onClick={handleSend}
-        disabled={disabled}
-        className="rounded-full bg-black px-4 py-3 text-white disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {disabled ? '…' : '➤'}
-      </button>
+        <button
+          onClick={handleSend}
+          disabled={disabled}
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white disabled:opacity-50"
+        >
+          ↗
+        </button>
+      </div>
     </div>
   );
 }

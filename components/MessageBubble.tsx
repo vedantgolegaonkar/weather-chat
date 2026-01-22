@@ -47,9 +47,7 @@ export default function MessageBubble({ message }: Props) {
     >
       <div
         className={`max-w-[78%] rounded-2xl px-5 py-4 text-sm leading-relaxed ${
-          isUser
-            ? 'bg-gray-100 text-black'
-            : 'border bg-white text-black shadow-sm'
+          isUser ? 'bg-gray-100 text-black' : 'bg-white text-black'
         }`}
       >
         {content ? (
@@ -79,11 +77,13 @@ export default function MessageBubble({ message }: Props) {
             {content}
           </ReactMarkdown>
         ) : (
-          <span className="flex gap-1 opacity-50">
-            <span className="animate-bounce">.</span>
-            <span className="animate-bounce delay-150">.</span>
-            <span className="animate-bounce delay-300">.</span>
-          </span>
+          <div className="inline-flex items-center rounded-2xl border border-gray-400 bg-white px-4 py-2 shadow-sm">
+            <span className="flex gap-1 opacity-50">
+              <span className="animate-bounce">.</span>
+              <span className="animate-bounce delay-150">.</span>
+              <span className="animate-bounce delay-300">.</span>
+            </span>
+          </div>
         )}
       </div>
     </div>

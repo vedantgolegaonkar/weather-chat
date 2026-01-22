@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import ChatInput from './ChatInput';
 import MessageBubble from './MessageBubble';
 import { Message } from '../types/chat';
-import { streamProvueAgentResponse } from "../utils/provueAgentApi";
+import { streamProvueAgentResponse } from '../utils/provueAgentApi';
 
 export default function ChatContainer() {
   const [messages, setMessages] = useState<Message[]>([
@@ -64,22 +64,21 @@ export default function ChatContainer() {
 
   return (
     <div className="flex min-h-screen justify-center bg-white">
-      <div className="flex w-full max-w-3xl flex-col">
+      <div className="w-full max-w-[760px] px-6 pt-16 pb-40">
         {error && (
           <div className="mx-4 mb-2 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
             {error}
           </div>
         )}
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto px-4 py-6">
+        <div className="space-y-10">
           {messages.map((message) => (
             <MessageBubble key={message.id} message={message} />
           ))}
           <div ref={bottomRef} />
         </div>
 
-        {/* Input Area */}
-        <div className="border-t px-4 py-4">
+        <div className="px-4 py-4">
           <ChatInput onSend={handleSend} disabled={isLoading} />{' '}
         </div>
       </div>
